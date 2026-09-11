@@ -16,13 +16,14 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
         const isAlreadyAdded = selectedStack.some((item) => item.id === user.id);
 
         if (!isAlreadyAdded) {
-        setSelectedStack([...selectedStack, user]);
+        // setSelectedStack([...selectedStack, user]);
+        setSelectedStack((prv) => [...prv, user])
         }
     };
     
     return (
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6 my-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
 
             {users.map((user) => {
 
@@ -30,17 +31,21 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
                 return (
                 <div
                     key={user.id}
-                    className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md
-                     transition-shadow flex flex-col justify-between">
+                    className={`bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md
+                     transition-shadow flex flex-col justify-between
+                     
+                     ${isAdded ? 'ring-1 ring-rose-400': ''}
+                     
+                     `}>
 
                     <div>
 
-                        {/* Icon & Top Right */}
+                        {/* Icon and badge */}
                         <div className="flex items-center justify-between mb-4">
                             <img
                             src={user.icon}
                             alt={user.techName}
-                            className="w-9 h-9 object-contain"/>
+                            className="w-11 h-11 object-contain"/>
 
                             {user.badge && (
                             <span className="text-xs font-medium px-3 py-1 rounded-full bg-blue-50 text-blue-500">
@@ -88,8 +93,8 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
                                 isAdded
                                     ? "bg-[#fef2f2] text-[#d34db1] cursor-not-allowed"
                                     : "bg-[#0b1320] hover:bg-[#162235] text-white"
-                            }`}
-                        >
+                            }`}>                            
+                            
                             {isAdded ? (
                                 <>
                                     <GiCheckMark /> Added to Stack
@@ -98,6 +103,7 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
                                 "Add to Stack"
                             )}
                         </button>
+
                         
                 </div>
                 );

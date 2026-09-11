@@ -7,13 +7,16 @@ import Nav from './components/Nav'
 import TechCarts from './components/technologies/TechCarts'
 import type { ITechProps } from './Type'
 
-function App() {
+
+
 
 const techFetch = async():Promise<ITechProps[]> => {
   const res = await fetch('/data.json');
   const data = await res.json()
   return data;
 }
+
+function App() {
 
 
   return (
