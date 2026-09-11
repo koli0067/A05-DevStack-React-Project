@@ -1,4 +1,5 @@
 import { use, type Dispatch, type SetStateAction } from "react";
+import { GiCheckMark } from "react-icons/gi";
 import type { ITechProps } from "../../Type";
 
 export interface ShowCartProps {
@@ -12,11 +13,11 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
     const users = use(techFetch);  
 
      const handleAdd = (user: ITechProps) => {
-            const isAlreadyAdded = selectedStack.find((item) => item.id === user.id);
+        const isAlreadyAdded = selectedStack.some((item) => item.id === user.id);
 
-            if (!isAlreadyAdded) {
-            setSelectedStack([...selectedStack, user]);
-            }
+        if (!isAlreadyAdded) {
+        setSelectedStack([...selectedStack, user]);
+        }
     };
     
     return (
@@ -25,7 +26,7 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
 
             {users.map((user) => {
 
-                const isAdded = Boolean (selectedStack.map((item) => item.id === user.id));
+                const isAdded = Boolean (selectedStack.some((item) => item.id === user.id));
                 return (
                 <div
                     key={user.id}
@@ -80,34 +81,28 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
                         
                     </div>
 
-                        
-                    {/* <button onClick={() => handleAdd(user)}
-                     disabled = {isAdded}
-                    className={`w-full bg-[#0b1320] hover:bg-[#162235] text-white py-2.5 rounded-xl text-sm font-medium transition-colors
-                        ${isAdded ? '': "bg-gray-300 text-gray-500 cursor-not-allowed"}
-                        `}>
-
-                        {isAdded ? "Added to Stack" : "Add to Stack"}
-
-                    </button> */}
-
                     <button
-  onClick={() => setSelectedStack(user)}
-  
-  className={`w-full py-2.5 rounded-xl 
-     text-sm font-medium transition-colors 
-    disabled={selectedStack === true ? true : false}
-  `}>
-
-    
-  {isAdded === true ? "Added to Stack" : "Add to Stack"}
-</button>
-                    
+                            onClick={() => handleAdd(user)}
+                            disabled={isAdded}
+                            className={`w-full py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center justify-center gap-2 ${
+                                isAdded
+                                    ? "bg-[#fef2f2] text-[#d34db1] cursor-not-allowed"
+                                    : "bg-[#0b1320] hover:bg-[#162235] text-white"
+                            }`}
+                        >
+                            {isAdded ? (
+                                <>
+                                    <GiCheckMark /> Added to Stack
+                                </>
+                            ) : (
+                                "Add to Stack"
+                            )}
+                        </button>
+                        
                 </div>
                 );
             })}
         </div>
-
 
     )
 }

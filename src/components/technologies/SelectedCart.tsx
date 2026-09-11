@@ -1,5 +1,6 @@
 export interface SelectedCartProps {
      techFetch: Promise<ITechProps[]>
+     selectedStack: Dispatch<SetStateAction<ITechProps[]>>
 }
 
 const SelectedCart = ({ techFetch }: SelectedCartProps) => {

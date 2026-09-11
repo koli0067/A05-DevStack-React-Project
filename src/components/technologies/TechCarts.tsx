@@ -9,10 +9,7 @@ export interface TechCartsProps {
 
 const TechCarts = ({ techFetch }: TechCartsProps) => {
 
-    const [selectedStack, setSelectedStack] = useState<ITechProps[]>([])
-
-
-
+    const [selectedStack, setSelectedStack] = useState<ITechProps[]>([]);
 
     
     return(
