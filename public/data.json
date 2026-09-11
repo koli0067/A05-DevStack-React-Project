@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "techName": "React",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
+    "rating": 4.9,
+    "badge": "Popular",
+    "level": "Beginner-Friendly",
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": 2,
+    "techName": "Vue.js",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    "description": "An approachable, performant, and versatile framework for building web user interfaces.",
+    "rating": 4.8,
+    "badge": "Versatile",
+    "level": "Beginner-Friendly",
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": 3,
+    "techName": "Svelte",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
+    "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
+    "rating": 4.8,
+    "badge": "Fast",
+    "level": "Intermediate",
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": 4,
+    "techName": "Next.js",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    "description": "The React framework for full-stack web applications with hybrid static & server rendering.",
+    "rating": 4.9,
+    "badge": "Popular",
+    "level": "Intermediate",
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": 5,
+    "techName": "Node.js",
+    "category": "Backend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "rating": 4.8,
+    "badge": "Standard",
+    "level": "Intermediate",
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": 6,
+    "techName": "PostgreSQL",
+    "category": "Database",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "rating": 4.9,
+    "badge": "Top SQL",
+    "level": "Intermediate",
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": 7,
+    "techName": "Redis",
+    "category": "Database",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    "description": "In-memory data structure store used as a high-speed database, cache, and message broker.",
+    "rating": 4.8,
+    "badge": "Cache",
+    "level": "Intermediate",
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": 8,
+    "techName": "JavaScript",
+    "category": "Language",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "rating": 4.9,
+    "badge": "Ubiquitous",
+    "level": "Beginner-Friendly",
+    "buttonText": "Add to Stack"
+  },
+  {
+    "id": 9,
+    "techName": "TypeScript",
+    "category": "Language",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
+    "rating": 4.9,
+    "badge": "Essential",
+    "level": "Intermediate",
+    "buttonText": "Add to Stack"
+  }
+]
