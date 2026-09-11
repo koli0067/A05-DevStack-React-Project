@@ -4,7 +4,7 @@ import './App.css'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
 import Nav from './components/Nav'
-import TechCarts from './components/technologies/TechCarts'
+import TechCarts from './components/technologies/TechCards'
 import type { ITechProps } from './Type'
 
 

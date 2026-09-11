@@ -17,7 +17,7 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
 
         if (!isAlreadyAdded) {
         // setSelectedStack([...selectedStack, user]);
-        setSelectedStack((prv) => [...prv, user])
+        setSelectedStack((selected) => [...selected, user])
         }
     };
     
