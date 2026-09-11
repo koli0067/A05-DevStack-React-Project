@@ -1,4 +1,6 @@
+import { useState } from "react";
 import type { ITechProps } from "../../Type";
+import SelectedCart from "./SelectedCart";
 import ShowCart from "./ShowCart";
 
 export interface TechCartsProps {
@@ -6,6 +8,12 @@ export interface TechCartsProps {
 }
 
 const TechCarts = ({ techFetch }: TechCartsProps) => {
+
+    const [selectedStack, setSelectedStack] = useState<ITechProps[]>([])
+
+
+
+
     
     return(
         <div className="container mx-auto mt-[80px]">
@@ -13,8 +21,14 @@ const TechCarts = ({ techFetch }: TechCartsProps) => {
                 <h2 className="text-4xl font-bold text-[#0F172A]">Explore the <span className=" bg-gradient-to-r from-[#d34db1] to-[#8537e2] bg-clip-text text-transparent">Technologies</span></h2>
                 <p className="pt-4 text-[18px] text-slate-600">Pick one technology per category to build your ideal stack.</p>
             </div>
-            <div>
-                <ShowCart techFetch ={techFetch}></ShowCart>
+            <div className="grid grid-cols-12">
+                <div className="col-span-8">
+                   <ShowCart selectedStack = {selectedStack} setSelectedStack = {setSelectedStack} techFetch ={techFetch}></ShowCart>
+                </div>
+                <div className="col-span-4">
+                   <SelectedCart selectedStack = {selectedStack}></SelectedCart>
+                </div>
+                
             </div>
             
         </div>
