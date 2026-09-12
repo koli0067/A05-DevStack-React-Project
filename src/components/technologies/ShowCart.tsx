@@ -1,6 +1,7 @@
 import { use, type Dispatch, type SetStateAction } from "react";
 import { GiCheckMark } from "react-icons/gi";
 import type { ITechProps } from "../../Type";
+import { toast } from "react-toastify";
 
 export interface ShowCartProps {
     techFetch: Promise<ITechProps[]>;
@@ -16,7 +17,8 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
         const isAlreadyAdded = selectedStack.some((item) => item.id === user.id);
 
         if (!isAlreadyAdded) {
-        setSelectedStack((selected) => [...selected, user])
+        setSelectedStack((selected) => [...selected, user]);
+        toast.success(`${user.techName} is selected`);
         }
     };
     
