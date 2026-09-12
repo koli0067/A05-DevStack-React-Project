@@ -1,92 +1,122 @@
 [
   {
     "id": 1,
-    "techName": "React",
+    "name": "React",
     "category": "Frontend",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "rating": 4.9,
-    "badge": "Popular",
-    "difficulty": "Beginner-Friendly"
+    "difficulty": "Beginner-Friendly",
+    "badge": "Popular"
   },
   {
     "id": 2,
-    "techName": "Vue.js",
+    "name": "Vue.js",
     "category": "Frontend",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
     "description": "An approachable, performant, and versatile framework for building web user interfaces.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
     "rating": 4.8,
-    "badge": "Versatile",
-    "difficulty": "Beginner-Friendly"
+    "difficulty": "Beginner-Friendly",
+    "badge": "Versatile"
   },
   {
     "id": 3,
-    "techName": "Svelte",
+    "name": "Svelte",
     "category": "Frontend",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
     "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
     "rating": 4.8,
-    "badge": "Fast",
-    "difficulty": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Fast"
   },
   {
     "id": 4,
-    "techName": "Next.js",
+    "name": "Next.js",
     "category": "Frontend",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     "description": "The React framework for full-stack web applications with hybrid static & server rendering.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     "rating": 4.9,
-    "badge": "Popular",
-    "difficulty": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Popular"
   },
   {
     "id": 5,
-    "techName": "Node.js",
+    "name": "Node.js",
     "category": "Backend",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     "rating": 4.8,
-    "badge": "Standard",
-    "difficulty": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Standard"
   },
   {
     "id": 6,
-    "techName": "PostgreSQL",
+    "name": "PostgreSQL",
     "category": "Database",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     "rating": 4.9,
-    "badge": "Top SQL",
-    "difficulty": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Top SQL"
   },
   {
     "id": 7,
-    "techName": "Redis",
+    "name": "Redis",
     "category": "Database",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
     "description": "In-memory data structure store used as a high-speed database, cache, and message broker.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
     "rating": 4.8,
-    "badge": "Cache",
-    "difficulty": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Cache"
   },
   {
     "id": 8,
-    "techName": "JavaScript",
+    "name": "JavaScript",
     "category": "Language",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "rating": 4.9,
-    "badge": "Ubiquitous",
-    "difficulty": "Beginner-Friendly"
+    "difficulty": "Beginner-Friendly",
+    "badge": "Ubiquitous"
   },
   {
     "id": 9,
-    "techName": "TypeScript",
+    "name": "TypeScript",
     "category": "Language",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     "rating": 4.9,
-    "badge": "Essential",
-    "difficulty": "Intermediate"
+    "difficulty": "Intermediate",
+    "badge": "Essential"
+  },
+  {
+    "id": 10,
+    "name": "Tailwind CSS",
+    "category": "Styling",
+    "description": "A utility-first CSS framework packed with classes for rapid custom user interface design.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Trending"
+  },
+  {
+    "id": 11,
+    "name": "Docker",
+    "category": "DevOps",
+    "description": "Accelerates how you build, share, and run applications with lightweight containerization.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    "rating": 4.8,
+    "difficulty": "Advanced",
+    "badge": "Containers"
+  },
+  {
+    "id": 12,
+    "name": "Git",
+    "category": "Tools",
+    "description": "A distributed version control system designed to handle projects with speed and efficiency.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential"
   }
 ]

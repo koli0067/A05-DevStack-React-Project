@@ -8,8 +8,6 @@ import TechCarts from './components/technologies/TechCards'
 import type { ITechProps } from './Type'
 
 
-
-
 const techFetch = async():Promise<ITechProps[]> => {
   const res = await fetch('/data.json');
   const data = await res.json()
@@ -18,19 +16,13 @@ const techFetch = async():Promise<ITechProps[]> => {
 
 function App() {
 
-
   return (
     <>
      <Nav></Nav>
      <Banner></Banner>
-
-
      <Suspense fallback={<h2>Loading...</h2>}>
-
           <TechCarts techFetch ={techFetch()} ></TechCarts>
-
      </Suspense>
-
      <Footer></Footer>
     </>
   )

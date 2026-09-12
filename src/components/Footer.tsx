@@ -2,20 +2,20 @@ import footer from '../assets/logo-text.png'
 
 const Footer = () => {
   return (
-    <div className="container mx-auto mt-8">
-        <div className=" flex justify-between flex-wrap gap-8">
-            <div>
-               <img src={footer} alt="logo" className="pb-3" />
-               <p className="text-[#475569] text-[18px]">Curated tools, technologies, and resources for developers building <br />
-               modern software.</p>
-               <ul className='flex gap-5 mt-4 text-[18px] text-[#475569] font-semibold'>
+    <footer className="container mx-auto mt-8">
+        <div className="grid md:grid-cols-4 gap-8">
+            <div className='sm:col-span-1'>
+               <img src={footer} alt="logo" className="pb-3 mx-auto sm:mx-0" />
+               <p className="text-[#475569] text-[18px] sm:text-start text-center">Curated tools, technologies, and resources for developers building
+               modern <br /> software.</p>
+               <ul className='flex justify-center sm:justify-start gap-5 mt-4 text-[18px] text-[#475569] font-semibold sm:justify-center'>
                 <li><a href="#">GitHub</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">LinkedIn</a></li>
                </ul>
             </div>
 
-            <div>
+            <div className='sm:block hidden'>
                <p  className="text-[#0F172A] pb-3 text-[22px] font-semibold">PRODUCT</p>
 
                <ul className="text-[18px] text-[#475569] leading-9">
@@ -25,7 +25,7 @@ const Footer = () => {
                </ul>
             </div>
 
-            <div> 
+            <div className='sm:block hidden'> 
                 <p  className="text-[#0F172A] pb-3 text-[22px] font-semibold">COMPANY</p>
 
                  <ul className="text-[18px] text-[#475569] leading-9">
@@ -36,7 +36,7 @@ const Footer = () => {
 
             </div>
             
-            <div>
+            <div className='sm:block hidden'>
                 <p  className="text-[#0F172A] pb-3 text-[22px] font-semibold">LEGAL</p>
 
                 <ul className="text-[18px] text-[#475569] leading-9">
@@ -46,14 +46,14 @@ const Footer = () => {
             </div>
             
         </div>
-        <div className="flex justify-between items-center py-8 mt-9 text-[#475569]">
+        <div className="flex justify-between sm:flex-row flex-col items-center py-8 mt-9 text-[#475569]">
             <p>© 2026 Dev Stack. All rights reserved.</p>
-            <ul className="flex justify-center flex-wrap gap-5 text-[18px]">
-                <li>Privacy</li>
-                <li>Terms</li>
+            <ul className="flex justify-center gap-5 text-[18px]">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
             </ul>
         </div>
-    </div>
+    </footer>
   )
 }
 

@@ -1,7 +1,7 @@
 import { use, type Dispatch, type SetStateAction } from "react";
 import { GiCheckMark } from "react-icons/gi";
 import type { ITechProps } from "../../Type";
-import { toast } from "react-toastify";
+import { Bounce, toast } from "react-toastify";
 
 export interface ShowCartProps {
     techFetch: Promise<ITechProps[]>;
@@ -18,7 +18,17 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
 
         if (!isAlreadyAdded) {
         setSelectedStack((selected) => [...selected, user]);
-        toast.success(`${user.techName} is selected`);
+        toast.success(`${user.name} is selected`, {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+            });
         }
     };
     
@@ -45,7 +55,7 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
                         <div className="flex items-center justify-between mb-4">
                             <img
                             src={user.icon}
-                            alt={user.techName}
+                            alt={user.name}
                             className="w-11 h-11 object-contain"/>
 
                             {user.badge && (
@@ -57,7 +67,7 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
 
                         {/* 2. Title */}
                         <h2 className="text-xl font-bold text-slate-900 mb-2">
-                            {user.techName}
+                            {user.name}
                         </h2>
 
                         {/* 3. Description */}

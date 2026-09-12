@@ -2,6 +2,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import { RxCross2 } from "react-icons/rx";
 import type { ITechProps } from "../../Type";
+import { Bounce, toast } from "react-toastify";
 
 export interface SelectedCartProps {
      selectedStack: ITechProps[];
@@ -9,12 +10,34 @@ export interface SelectedCartProps {
 }
 
 const SelectedCart = ({ selectedStack, setSelectedStack}: SelectedCartProps) => {
-    const handleRemove = (id:number) => {
-    setSelectedStack((prev) => prev.filter((item) => item.id !== id));
+    const handleRemove = (tech: ITechProps) => {
+    setSelectedStack((prev) => prev.filter((item) => item.id !== tech.id));
+     toast.info(`${tech.name} is removed`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+      });
   };
 
   const handleRemoveAll = () => {
     setSelectedStack([]);
+    toast.info('All technologies removed from stack', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+      });
   };
 
   return (
@@ -41,16 +64,16 @@ const SelectedCart = ({ selectedStack, setSelectedStack}: SelectedCartProps) => 
                 
 
                 <div className="flex justify-center gap-4">
-                        <img src={tech.icon} alt={tech.techName} className="w-[50px] pb-3"/>
+                        <img src={tech.icon} alt={tech.name} className="w-[50px]"/>
                     <div>
                 
-                    <h2 className="font-semibold text-gray-800 text-[17px]">{tech.techName}</h2>
+                    <h2 className="font-semibold text-gray-800 text-[17px]">{tech.name}</h2>
                     <p>{tech.category}</p>
                     </div>
                 </div>
 
                 <button
-                    onClick={() => handleRemove(tech.id)}
+                    onClick={() => handleRemove(tech)}
                     className="text-gray-500 hover:text-red-500 text-[26px] px-2 py-1">
                     <RxCross2 />
                 </button>
@@ -62,7 +85,7 @@ const SelectedCart = ({ selectedStack, setSelectedStack}: SelectedCartProps) => 
                 onClick={handleRemoveAll}
                 className="w-full mt-4 py-2.5 bg-red-50 hover:bg-red-100 text-red-600 
                 border font-medium text-sm rounded-xl transition">
-                Remove all
+                Remove All
             </button>
         </>
 

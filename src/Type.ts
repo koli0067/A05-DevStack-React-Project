@@ -1,6 +1,6 @@
 export interface ITechProps {
     id: number;
-    techName: string;
+    name: string;
     category: string;
     icon: string;
     description: string;
