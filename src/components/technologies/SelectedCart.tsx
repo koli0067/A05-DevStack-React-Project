@@ -33,7 +33,7 @@ const SelectedCart = ({ selectedStack, setSelectedStack}: SelectedCartProps) => 
         </div>
       ) : (
         <>
-            <div className="space-y-2 max-h-100 overflow-y-auto">
+            <div className="space-y-2 overflow-y-auto">
             {selectedStack.map((tech:ITechProps) => (
                 <div key={tech.id}
                 className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border

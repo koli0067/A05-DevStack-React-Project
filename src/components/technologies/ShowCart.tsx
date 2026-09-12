@@ -16,7 +16,6 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
         const isAlreadyAdded = selectedStack.some((item) => item.id === user.id);
 
         if (!isAlreadyAdded) {
-        // setSelectedStack([...selectedStack, user]);
         setSelectedStack((selected) => [...selected, user])
         }
     };
