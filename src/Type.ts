@@ -5,7 +5,6 @@ export interface ITechProps {
     icon: string;
     description: string;
     rating: number;
-    badge?: string;
-    level?: string;
-    buttonText?: string;
+    badge: string;
+    difficulty: string;
 }

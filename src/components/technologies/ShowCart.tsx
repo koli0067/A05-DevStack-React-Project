@@ -72,7 +72,7 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
                                 {user.category}
                             </span>
                             <span className="text-xs text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
-                                {user.level}
+                                {user.difficulty}
                             </span>
 
 

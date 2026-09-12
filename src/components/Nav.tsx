@@ -7,7 +7,7 @@ const Nav = () => {
             <img src={logo} alt="" /> 
            
 
-           <ul className="flex justify-center gap-5 text-[#475569] text-[20px] font-[400]">
+           <ul className="flex sm:flex-none justify-center gap-5 text-[#475569] text-[20px] font-[400]">
                 <li className="text-[#d91b7e]">Home</li>
                 <li><a href="#">Technologies</a></li>
                 <li><a href="#">Projects</a></li>
