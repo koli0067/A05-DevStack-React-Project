@@ -18,7 +18,7 @@ const TechCards = ({ techFetch }: TechCardsProps) => {
                 <p className="pt-4 text-[18px] text-slate-600">Pick one technology per category to build your ideal stack.</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mt-20">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-20">
                 <div className="lg:col-span-8  col-span-1">
                    <ShowCart selectedStack = {selectedStack} setSelectedStack = {setSelectedStack} techFetch ={techFetch}></ShowCart>
                 </div>

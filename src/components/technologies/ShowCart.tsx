@@ -42,7 +42,7 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
                 return (
                 <div
                     key={user.id}
-                    className={`bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md
+                    className={`bg-white border border-slate-100 rounded-2xl p-4 shadow-sm hover:shadow-md
                      transition-shadow flex flex-col justify-between
                      
                      ${isAdded ? 'ring-1 ring-rose-400': ''}
@@ -51,7 +51,8 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
 
                     <div>
 
-                        {/* Icon and badge */}
+                       
+                       
                         <div className="flex items-center justify-between mb-4">
                             <img
                             src={user.icon}
@@ -65,19 +66,22 @@ const ShowCart = ({ techFetch, selectedStack, setSelectedStack }: ShowCartProps)
                             )}
                         </div>
 
-                        {/* 2. Title */}
+                       
+                       
                         <h2 className="text-xl font-bold text-slate-900 mb-2">
                             {user.name}
                         </h2>
 
-                        {/* 3. Description */}
+                        
+                        
                         <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-6">
                             {user.description}
                         </p>
                     </div>
 
                     <div>
-                    {/* 4. Tags & Star Rating Row */}
+                    
+                    
                     <div className="flex items-center justify-between mb-4">
                         
                             <span className="text-xs text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
